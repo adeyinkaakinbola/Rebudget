@@ -7,7 +7,7 @@
     "build": "webpack",
     "dev-server": "webpack-dev-server"
   },
-  "author": "Dorcas Chepkoech",
+  "author": "Adeyinka Akinbola",
   "license": "ISC",
   "dependencies": {
     "babel-cli": "^6.24.1",
