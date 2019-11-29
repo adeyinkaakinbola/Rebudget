@@ -7,6 +7,12 @@ const person = {
         temp:95
     }
 };
+var payload ={
+    increamentBy:7
+}
+console.log(payload.increamentBy);
+var{increamentBy}=payload;
+console.log(increamentBy)
 const { name }= person;
 // console.log(name);
 //ARRAY DESTRUCTURING
