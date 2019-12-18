@@ -1,16 +1,17 @@
 import * as firebase from "firebase";
 var firebaseConfig = {
-  apiKey: "AIzaSyCgnZhZtq2vvWv3HQdtBXWwL25dFgwC8d8",
-  authDomain: "budget-69d65.firebaseapp.com",
-  databaseURL: "https://budget-69d65.firebaseio.com",
-  projectId: "budget-69d65",
-  storageBucket: "budget-69d65.appspot.com",
-  messagingSenderId: "49622833661",
-  appId: "1:49622833661:web:87e9b7f7f5cc39810ce194"
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.FIREBASE_DATABASE_URL,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID
 };
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
-export { firebase, database as default };
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+export { firebase, googleAuthProvider, database as default };
 
 // database
 //   .ref()
