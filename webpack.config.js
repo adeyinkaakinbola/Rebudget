@@ -3,10 +3,12 @@ const path = require("path");
 const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-process.env.NODE_ENV = process.env.NODE_ENV || "development";
+process.env.NODE_ENV = process.env.NODE_ENV || "production";
 
 if (process.env.NODE_ENV === "development") {
   require("dotenv").config({ path: ".env.development" });
+}else if (process.env.NODE_ENV==='production'){
+  require('dotenv').config({path:'.env.production'});
 }
 module.exports = env => {
   const isProduction = env === "production";
